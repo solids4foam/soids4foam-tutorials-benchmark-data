@@ -1,13 +1,13 @@
 # To generate the plot, use the following command:
 # > gnuplot plot.gnuplot -p
 
-set title "3dTube: Radial Displacement at Point A. Aitkens, sonicLiquidFluid, Euler, OpenFOAM-v2012."
+set title "3dTube: Radial Displacement at Point A. Aitkens, sonicLiquidFluid, OpenFOAM-v2012."
 set xlabel "Time (in s)"
 set ylabel "Radial Displacement (in mm)"
 set grid
 set key top right
 
-set yrange [-0.1:0.15]
+set yrange [-0.1:0.16]
 
 plot \
     "sonicLiquidFluid/aitkens/Euler/deltaT8e-4/postProcessing/0/solidPointDisplacement_displacement.dat" u 1:(1000*$3) w lp ps 1 pt 5 lc "red" lw 0.1 lt 1 t "Euler, deltaT=8x10^{-4}", \
